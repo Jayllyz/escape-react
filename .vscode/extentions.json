@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "yoavbls.pretty-ts-errors",
+    "mylesmurphy.prettify-ts",
+    "ms-azuretools.vscode-docker",
+    "christian-kohler.path-intellisense",
+    "meganrogge.template-string-converter",
+    "biomejs.biome"
+  ]
+}
