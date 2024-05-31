@@ -1,0 +1,15 @@
+# Production
+services:
+  server:
+    build:
+      context: .
+      target: prod
+      dockerfile: Dockerfile
+    tty: true
+    stdin_open: true
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=Production
+      - PORT=3000
+    ports:
+      - 3000:3000
