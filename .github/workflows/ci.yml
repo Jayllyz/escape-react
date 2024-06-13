@@ -41,5 +41,8 @@ jobs:
       - name: 🚀 Run Biome
         run: pnpm run lint:check
 
+      - name: 🏗️ Test build
+        run: pnpm run build
+
       - name: 🧪 Check type coverage
         run: npx type-coverage --detail --at-least 90
