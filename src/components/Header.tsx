@@ -10,6 +10,7 @@ export default function Header() {
   return (
     <header>
       <nav className="grid py-8 items-center justify-center bg-slate-500 text-white">
+        <h1 className="text-2xl font-bold text-white bg-slate-500 pl-8 pr-4 py-2 text-center">La Maison Horrifique</h1>
         <ul className="flex gap-8 list-none p-0 m-0">
           <li className="mx-2 relative group">
             <a href="/" className="block">

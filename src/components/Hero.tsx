@@ -5,11 +5,11 @@ function Hero() {
         <h1 className="text-6xl text-black font-bold">Qui sommes nous ?</h1>
         <div className="max-w-[700px]">
           <p className="w-full">
-            Bienvenue dans notre univers captivant d'escape games, où chaque aventure est une expérience unique et
-            palpitante ! Que vous soyez amateur de frissons, de mystères ou d'aventures épiques, notre entreprise vous
-            propose une variété de scénarios immersifs qui sauront combler toutes vos attentes. Plongez dans des mondes
-            fantastiques, résolvez des énigmes complexes et défiez vos capacités de réflexion et de collaboration pour
-            vous échapper à temps.
+            La maison horrifique est un univers captivant d'escape games, où chaque aventure est une expérience unique
+            et palpitante ! Que vous soyez amateur de frissons, de mystères ou d'aventures épiques, notre entreprise
+            vous propose une variété de scénarios immersifs qui sauront combler toutes vos attentes.
+            <br /> Plongez dans des mondes fantastiques, résolvez des énigmes complexes et défiez vos capacités de
+            réflexion et de collaboration pour vous échapper à temps.
           </p>
         </div>
         <a href="#booking-section">
