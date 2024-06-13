@@ -35,8 +35,8 @@ export default function BookingForm() {
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           />
         </div>
-        <div className='flex items-center gap-4 w-full'>
-          <div className='w-full'>
+        <div className="flex items-center gap-4 w-full">
+          <div className="w-full">
             <label className="block text-sm font-medium text-gray-700" htmlFor="date">
               Date
             </label>
@@ -50,7 +50,7 @@ export default function BookingForm() {
               onChange={(e) => setFormData({ ...formData, date: e.target.value })}
             />
           </div>
-          <div className='w-full'>
+          <div className="w-full">
             <label className="block text-sm font-medium text-gray-700" htmlFor="time">
               Heure
             </label>
@@ -65,34 +65,34 @@ export default function BookingForm() {
             />
           </div>
         </div>
-        <div className='w-full'>
-            <label className="block text-sm font-medium text-gray-700" htmlFor="numberParticipants">
-              Nombres de participants
-            </label>
-            <input
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-              type="number"
-              id="numberParticipants"
-              name="numberParticipants"
-              autoComplete="numberParticipants"
-              value={formData.numberParticipants}
-              onChange={(e) => setFormData({ ...formData, numberParticipants: parseInt(e.target.value) })}
-            />
+        <div className="w-full">
+          <label className="block text-sm font-medium text-gray-700" htmlFor="numberParticipants">
+            Nombres de participants
+          </label>
+          <input
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            type="number"
+            id="numberParticipants"
+            name="numberParticipants"
+            autoComplete="numberParticipants"
+            value={formData.numberParticipants}
+            onChange={(e) => setFormData({ ...formData, numberParticipants: Number.parseInt(e.target.value) })}
+          />
         </div>
-        <div className='w-full flex items-center gap-4'>
-            <input
-              className="w-4 h-4 mt-1 block px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-              type="checkbox"
-              id="isIndividual"
-              name="isIndividual"
-              autoComplete="isIndividual"
-              checked={formData.isIndividual}
-              onChange={(e) => setFormData({ ...formData, isIndividual: e.target.checked })}
-            />
-            <label className="block text-sm font-medium text-gray-700" htmlFor="isIndividual">
-              Je suis un particulier
-            </label>
-          </div>
+        <div className="w-full flex items-center gap-4">
+          <input
+            className="w-4 h-4 mt-1 block px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            type="checkbox"
+            id="isIndividual"
+            name="isIndividual"
+            autoComplete="isIndividual"
+            checked={formData.isIndividual}
+            onChange={(e) => setFormData({ ...formData, isIndividual: e.target.checked })}
+          />
+          <label className="block text-sm font-medium text-gray-700" htmlFor="isIndividual">
+            Je suis un particulier
+          </label>
+        </div>
         <div>
           <label className="block text-sm font-medium text-gray-700" htmlFor="precision">
             Précisions
