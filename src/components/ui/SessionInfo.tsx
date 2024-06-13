@@ -30,7 +30,7 @@ function SessionInfo({
   }
 
   return (
-    <div className="flex flex-row gap-2 p-4 h-[348px] shadow-xl rounded-lg">
+    <div className="flex flex-row gap-2 p-4 h-[348px] shadow-xl rounded-lg" id={name}>
       <img className="w-[428px] object-cover" src={image} alt="Jason" width={800} height={400} />
       <div className="mx-8 my-4">
         <h1 className="text-2xl font-bold mb-4">{name}</h1>
