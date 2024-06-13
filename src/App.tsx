@@ -1,3 +1,4 @@
+import Footer from './components/Footer';
 import Header from './components/Header';
 import SessionInfo from './components/ui/SessionInfo';
 
@@ -49,6 +50,7 @@ function App() {
           minPlayers={3}
           maxPlayers={6}
         />
+        <Footer />
       </main>
     </html>
   );
