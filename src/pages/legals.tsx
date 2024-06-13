@@ -1,7 +1,7 @@
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
-export default function Legales() {
+export default function Legals() {
   return (
     <>
       <main>

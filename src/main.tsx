@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App.tsx';
-import Legales from './pages/legales.tsx';
+import Legals from './pages/legals.tsx';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css';
 
@@ -12,7 +12,7 @@ if (rootElement) {
       <Router>
         <Routes>
           <Route path="/" element={<App />} />
-          <Route path="/mention-legales" element={<Legales />} />
+          <Route path="/mention-legales" element={<Legals />} />
         </Routes>
       </Router>
     </React.StrictMode>,
