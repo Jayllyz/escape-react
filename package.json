@@ -8,7 +8,7 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "lint": "biome check --write .",
-    "lint:check": "biome check ."
+    "lint:check": "biome ci"
   },
   "dependencies": {
     "react": "^18.3.1",
