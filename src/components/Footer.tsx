@@ -1,10 +1,10 @@
 function Footer() {
   return (
-    <footer className="bg-slate-500 text-white text-center py-4">
-      <p>&copy; 2021 Escape React. Tous droits réservés.</p>
+    <footer className="bg-slate-500 text-white text-center py-4 bottom-0 w-full">
+      <p>&copy; 2024 Escape React. Tous droits réservés.</p>
       <br />
       <div className="flex justify-center items-center gap-4">
-        <a href="/mentions-legales" className="text-blue-300 hover:underline">
+        <a href="/mention-legales" className="text-blue-300 hover:underline">
           Mentions légales
         </a>
         |
