@@ -14,7 +14,9 @@ function App() {
           <h1 className="flex justify-center bg-slate-400 py-4 text-white text-3xl font-bold">Nos Sessions</h1>
         </div>
         <Sessions />
-        <ContactForm />
+        <div className="m-8">
+          <ContactForm />
+        </div>
         <Footer />
       </main>
     </html>
