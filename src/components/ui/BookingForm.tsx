@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function ContactForm() {
+export default function Bookin() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -13,7 +13,7 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-4">
+    <div className="flex flex-col items-center justify-center space-y-4 p-4 rounded-lg shadow-lg">
       <h1 className="text-2xl">Nous contacter</h1>
       <form className="flex flex-col items-center justify-center" onSubmit={handleSubmit}>
         <label className="block" htmlFor="name">
