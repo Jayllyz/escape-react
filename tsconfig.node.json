@@ -9,5 +9,5 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true
   },
-  "include": ["vite.config.ts"]
+  "include": ["farm.config.ts"]
 }

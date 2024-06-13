@@ -35,7 +35,7 @@ export const sessions: Session[] = [
     duration: 150,
     pricePerPerson: 30,
     rating: 5,
-    image: 'labyrinth.jpg',
+    image: 'labyrinth.avif',
   },
   {
     name: "L'asile",
