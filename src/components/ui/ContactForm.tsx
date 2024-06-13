@@ -13,46 +13,61 @@ export default function ContactForm() {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center space-y-4 p-4 rounded-lg shadow-lg">
-      <h1 className="text-2xl">Nous contacter</h1>
-      <form className="flex flex-col items-center justify-center" onSubmit={handleSubmit}>
-        <label className="block" htmlFor="name">
-          Nom
+    <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md">
+      <h1 className="text-2xl font-semibold mb-6 text-center">Nous contacter</h1>
+      <form className="space-y-4" onSubmit={handleSubmit}>
+        <div>
+          <label className="block text-sm font-medium text-gray-700" htmlFor="name">
+            Nom
+          </label>
           <input
-            className="block  border border-gray-400 rounded-sm"
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             type="text"
             id="name"
             name="name"
+            placeholder="John Doe"
             autoComplete="name"
             value={formData.name}
             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
           />
-        </label>
-        <label className="block" htmlFor="email">
-          Email
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700" htmlFor="email">
+            Email
+          </label>
           <input
-            className="block border border-gray-400 rounded-sm"
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             type="email"
             id="email"
             name="email"
             autoComplete="email"
+            placeholder="email@gmail.com"
             value={formData.email}
             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
           />
-        </label>
-        <label className="block" htmlFor="message">
-          Message
+        </div>
+        <div>
+          <label className="block text-sm font-medium text-gray-700" htmlFor="message">
+            Message
+          </label>
           <textarea
-            className="block border border-gray-400 rounded-sm"
+            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             id="message"
             name="message"
+            placeholder="Votre message..."
+            rows={4}
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
           />
-        </label>
-        <button className="block bg-blue-500 text-white rounded-sm mt-4 p-2" type="submit">
-          Envoyer
-        </button>
+        </div>
+        <div className="flex justify-center">
+          <button
+            className="w-[100px] flex justify-center py-2 px-4 border border-transparent  rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            type="submit"
+          >
+            Envoyer
+          </button>
+        </div>
       </form>
     </div>
   );
