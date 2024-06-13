@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Header() {
+export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -53,5 +53,3 @@ function Header() {
     </nav>
   );
 }
-
-export default Header;
