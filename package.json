@@ -8,7 +8,7 @@
     "start": "farm start",
     "build": "farm build",
     "preview": "farm preview",
-    "clean": "farm clean",
+    "clean": "farm clean && biome clean && rm -rf dist",
     "lint": "biome check --write .",
     "lint:check": "biome ci"
   },
