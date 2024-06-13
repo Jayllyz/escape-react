@@ -1,6 +1,8 @@
-# Escape React
+# Escape React 💀
 
-Ract app for a escape game company.
+[![CI](https://github.com/Jayllyz/escape-react/actions/workflows/cd-admin.yml/badge.svg?branch=main)](https://github.com/Jayllyz/escape-react/actions/workflows/ci.yml)
+
+Escape game company, react app using [Farm](https://github.com/farm-fe/farm) build tools.
 
 ## Setup
 
@@ -10,28 +12,8 @@ Install the dependencies:
 pnpm install
 ```
 
-## Get Started
-
 Start the dev server:
 
 ```bash
-pnpm start
-```
-
-Build the app for production:
-
-```bash
-pnpm build
-```
-
-Preview the Production build product:
-
-```bash
-pnpm preview
-```
-
-Clear persistent cache local files
-
-```bash
-pnpm clean
+pnpm dev
 ```
