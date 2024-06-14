@@ -1,7 +1,7 @@
 import { sessions } from '../data/sessions';
 import SessionInfo from './ui/SessionInfo';
 
-function Sessions() {
+function Sessions(): JSX.Element {
   const sessionItems = sessions.map((session) => <SessionInfo key={session.name} {...session} />);
 
   return (

@@ -1,6 +1,6 @@
 import BookingForm from './ui/BookingForm';
 
-function Booking() {
+function Booking(): JSX.Element {
   return (
     <section
       id="booking-section"

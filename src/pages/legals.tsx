@@ -1,7 +1,7 @@
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
-export default function Legals() {
+export default function Legals(): JSX.Element {
   return (
     <>
       <main>

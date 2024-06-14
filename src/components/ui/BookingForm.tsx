@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export default function BookingForm() {
+export default function BookingForm(): JSX.Element {
   const [formData, setFormData] = useState({
     name: '',
     email: '',

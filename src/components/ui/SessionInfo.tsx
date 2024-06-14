@@ -22,7 +22,7 @@ function SessionInfo({
   pricePerPerson,
   image,
   rating,
-}: SessionInfoProps) {
+}: SessionInfoProps): JSX.Element {
   let starItems = '';
 
   for (let i = 0; i < rating; i++) {

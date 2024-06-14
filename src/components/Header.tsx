@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-export default function Header() {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+export default function Header(): JSX.Element {
+  const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);

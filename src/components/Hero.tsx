@@ -1,4 +1,4 @@
-function Hero() {
+function Hero(): JSX.Element {
   return (
     <section className="p-8 h-[70vh] flex items-center justify-center bg-cover bg-right gap-24">
       <div className="flex flex-col justify-center gap-6">
