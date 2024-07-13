@@ -51,6 +51,11 @@ export default function Header(): JSX.Element {
               Contact
             </a>
           </li>
+          <li className="mx-2">
+            <a href="/login" className="block">
+              Accès employés
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
