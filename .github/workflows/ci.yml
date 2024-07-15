@@ -45,4 +45,7 @@ jobs:
         run: pnpm run build
 
       - name: 🧪 Check type coverage
-        run: npx type-coverage --detail --at-least 90
+        run: npx type-coverage@latest --detail --at-least 90
+
+      - name: 🧪 Run tests
+        run: pnpm test
