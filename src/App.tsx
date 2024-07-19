@@ -10,9 +10,7 @@ function App(): JSX.Element {
         <Hero />
         <Sessions />
         <Booking />
-        <div id="contact-section" className="m-8">
-          <ContactForm />
-        </div>
+        <ContactForm />
       </main>
     </html>
   );

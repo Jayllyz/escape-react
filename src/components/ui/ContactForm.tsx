@@ -13,7 +13,7 @@ export default function ContactForm(): JSX.Element {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md border-black border-[1px] border-opacity-30 ">
+    <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md border-black border-[1px] border-opacity-30 m-8">
       <h1 className="text-2xl font-semibold mb-6 text-center">Nous contacter</h1>
       <form className="space-y-4" onSubmit={handleSubmit}>
         <div>

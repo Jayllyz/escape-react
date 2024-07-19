@@ -1,11 +1,7 @@
-import Footer from '../components/Footer';
-import Header from '../components/Header';
-
 export default function Legals(): JSX.Element {
   return (
     <>
       <main>
-        <Header />
         <div className="max-w-4xl mx-auto p-8">
           <h1 className="text-3xl font-bold text-center">Mentions légales</h1>
           <h2 className="text-2xl font-semibold mt-8">1. Présentation du site</h2>
@@ -81,7 +77,6 @@ export default function Legals(): JSX.Element {
           </p>
         </div>
       </main>
-      <Footer />
     </>
   );
 }

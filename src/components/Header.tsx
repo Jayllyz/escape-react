@@ -29,17 +29,17 @@ export default function Header(): JSX.Element {
             {isDropdownOpen && (
               <ul className="absolute left-0 mt-2 w-40 bg-gray-500 shadow-md">
                 <li className="border-b">
-                  <a href="#Fuir Jason" className="block px-4 py-2 hover:bg-gray-200 hover:text-black">
+                  <a href="/#Fuir Jason" className="block px-4 py-2 hover:bg-gray-200 hover:text-black">
                     Fuir Jason
                   </a>
                 </li>
                 <li className="border-b">
-                  <a href="#Le labyrinthe" className="block px-4 py-2 hover:bg-gray-200 hover:text-black">
+                  <a href="/#Le labyrinthe" className="block px-4 py-2 hover:bg-gray-200 hover:text-black">
                     Le labyrinthe
                   </a>
                 </li>
                 <li>
-                  <a href="#L'asile" className="block px-4 py-2 hover:bg-gray-200 hover:text-black">
+                  <a href="/#L'asile" className="block px-4 py-2 hover:bg-gray-200 hover:text-black">
                     L'asile
                   </a>
                 </li>

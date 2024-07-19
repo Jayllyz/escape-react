@@ -53,20 +53,18 @@ function Login() {
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
 
-    setFormData((prev) => {
-      return {
-        ...prev,
-        [name]: value,
-      };
-    });
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
   };
 
   return (
-    <main>
-      <div className="h-[60vh] flex-col justify-center flex">
-        <div className="max-w-md w-full mx-auto p-6 bg-white rounded-lg shadow-md border-black border-[1px] border-opacity-30 ">
-          <h1 className="text-2xl font-semibold mb-6 text-center">Se connecter</h1>
-          {loginError.message && <p className="mt-2 text-sm text-red-500">{loginError.message}</p>}
+    <main className="min-h-screen flex items-center justify-center bg-gray-50 py-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-md w-full">
+        <div className="bg-white p-14 rounded-lg shadow-md border border-gray-200">
+          <h1 className="text-2xl font-semibold mb-4 text-center">Se connecter</h1>
+          {loginError.message && <p className="mb-4 text-sm text-red-500 text-center">{loginError.message}</p>}
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
               <label className="block text-sm font-medium text-gray-700" htmlFor="email">
@@ -76,13 +74,16 @@ function Login() {
                 className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
                 id="email"
                 name="email"
+                autoComplete="email"
+                type="email"
                 value={formData.email}
                 onChange={handleChange}
+                required
               />
-              {formErrors.email && <p className="mt-2 text-sm text-red-500">{formErrors.email}</p>}
+              {formErrors.email && <p className="mt-1 text-sm text-red-500">{formErrors.email}</p>}
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700" htmlFor="email">
+              <label className="block text-sm font-medium text-gray-700" htmlFor="password">
                 Mot de passe
               </label>
               <input
@@ -90,15 +91,17 @@ function Login() {
                 type="password"
                 id="password"
                 name="password"
+                required
                 value={formData.password}
                 onChange={handleChange}
               />
-              {formErrors.password && <p className="mt-2 text-sm text-red-500">{formErrors.password}</p>}
+              {formErrors.password && <p className="mt-1 text-sm text-red-500">{formErrors.password}</p>}
             </div>
-            <div className="flex justify-center">
+            <div>
               <button
-                className="w-[100px] flex justify-center py-2 px-4 border border-transparent  rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 type="submit"
+                disabled={!formData.email || !formData.password}
               >
                 Connexion
               </button>
