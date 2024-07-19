@@ -39,13 +39,13 @@ jobs:
         run: pnpm --color install
 
       - name: 🚀 Run Biome
-        run: pnpm run lint:check
+        run: node --run lint:check
 
       - name: 🏗️ Test build
-        run: pnpm run build
+        run: node --run build
 
       - name: 🧪 Check type coverage
         run: npx type-coverage@latest --detail --at-least 90
 
       - name: 🧪 Run tests
-        run: pnpm test
+        run: node --run test
