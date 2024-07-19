@@ -45,7 +45,7 @@ function Login() {
       });
       return;
     }
-    const employeeData = await response.json();
+    const employeeData = (await response.json()) as { id: string };
     sessionStorage.setItem('emailEmployee', employeeData.id);
     window.location.href = '/employeeDashboard';
   }
