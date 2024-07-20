@@ -7,6 +7,7 @@ import './index.css';
 import Footer from './components/Footer.tsx';
 import Header from './components/Header.tsx';
 import EmployeeDashboard from './pages/EmployeeDashboard.tsx';
+import EmployeeSession from './pages/EmployeeSession.tsx';
 import Login from './pages/Login.tsx';
 
 const rootElement = document.getElementById('root');
@@ -20,6 +21,7 @@ if (rootElement) {
           <Route path="/login" element={<Login />} />
           <Route path="/mention-legales" element={<Legals />} />
           <Route path="/employeeDashboard" element={<EmployeeDashboard />} />
+          <Route path="/employeeSession" element={<EmployeeSession />} />
         </Routes>
         <Footer />
       </Router>
