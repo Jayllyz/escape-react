@@ -1,5 +1,5 @@
-import type { Session } from '../../lib/types';
 import { updateSlot } from '../../lib/api';
+import type { Session } from '../../lib/types';
 
 function CancelSlot({
   id_slot,
