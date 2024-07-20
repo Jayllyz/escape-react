@@ -1,6 +1,10 @@
 {
   "users": [
     {
+      "id": "admin@gmail.com",
+      "password": "Respons11"
+    },
+    {
       "id": "johndoe@john.com",
       "password": "1234124124"
     },
@@ -19,7 +23,7 @@
   ],
   "sessions": [
     {
-      "id": "1",
+      "id": 1,
       "theme": "Horreur",
       "name": "Fuir Jason",
       "description": "Bienvenue dans \"Fuir Jason\", un jeu d'évasion palpitant où votre survie est en jeu. Vous êtes piégés dans une cabane isolée, poursuivis par le redoutable Jason. Vous avez 60 minutes pour résoudre les énigmes, trouver des indices cachés et déverrouiller les portes. Chaque minute qui passe rapproche Jason. Travaillez en équipe, restez calmes et utilisez votre intelligence pour vous échapper. Ne laissez pas la peur vous envahir, ou Jason aura gagné. Bonne chance, et que le jeu commence !",

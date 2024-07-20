@@ -10,7 +10,7 @@ export async function getSession(id: string): Promise<{ data: Session | null; st
   const response = await fetch('http://localhost:3030/sessions');
 
   if (response.status === 404) {
-    throw new Error('Erreur durant la récupération des sessions');
+    return { data: null, status: 404 };
   }
 
   const data = await response.json();
