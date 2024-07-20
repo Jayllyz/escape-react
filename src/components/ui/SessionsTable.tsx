@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { getSessions } from '../../lib/api';
+import type { Session } from '../../lib/types';
 
 function SessionsTable() {
-  const [sessions, setSessions] = useState([]);
+  const [sessions, setSessions] = useState<Session[]>([]);
 
   useEffect(() => {
     const sessionsQuery = getSessions();
