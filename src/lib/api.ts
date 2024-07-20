@@ -1,12 +1,12 @@
-import type { session } from './types';
+import type { Session } from './types';
 
-export async function getSessions(): Promise<{ data: session[]; status: number }> {
+export async function getSessions(): Promise<{ data: Session[]; status: number }> {
   const response = await fetch('http://localhost:3030/sessions');
 
   return { data: await response.json(), status: response.status };
 }
 
-export async function getSession(id: string): Promise<{ data: session | null; status: number }> {
+export async function getSession(id: string): Promise<{ data: Session | null; status: number }> {
   const response = await fetch('http://localhost:3030/sessions');
 
   if (response.status === 404) {
@@ -14,15 +14,16 @@ export async function getSession(id: string): Promise<{ data: session | null; st
   }
 
   const data = await response.json();
-  const filtered = data.filter((session: session) => session.id === Number.parseInt(id));
+  console.log(data);
+  const filtered = data.filter((session: Session) => session.id.toString() === id);
   return { data: filtered[0], status: response.status };
 }
 
-export async function cancelSlot(id_session: string, id_slot: string): Promise<{ status: number }> {
-  const response = await fetch(`http://localhost:3030/sessions/${id_session}/slots/${id_slot}`, {
-    method: 'PATCH',
+export async function updateSlot(id_session: string, data: Session): Promise<{ status: number }> {
+  const response = await fetch(`http://localhost:3030/sessions/${id_session}`, {
+    method: 'PUT',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ status: 'cancelled' }),
+    body: JSON.stringify(data),
   });
 
   return { status: response.status };

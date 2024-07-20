@@ -1,4 +1,4 @@
-export type session = {
+export type Session = {
   id: number;
   theme: string;
   name: string;

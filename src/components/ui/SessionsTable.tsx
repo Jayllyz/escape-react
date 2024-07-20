@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { getSessions } from '../../lib/api';
-import type { session } from '../../lib/types';
+import type { Session } from '../../lib/types';
 
 function SessionsTable() {
-  const [sessions, setSessions] = useState<session[]>([]);
+  const [sessions, setSessions] = useState<Session[]>([]);
 
   useEffect(() => {
     const fetchSessions = async () => {

@@ -1,13 +1,13 @@
 import { useEffect, useState } from 'react';
 import { getSession } from '../lib/api';
-import type { session } from '../lib/types';
+import type { Session } from '../lib/types';
 import '../components/ui/CancelSlot';
 import CancelSlot from '../components/ui/CancelSlot';
 import RestoreSlot from '../components/ui/RestoreSlot';
 
 function EmployeeSession() {
   const id = new URLSearchParams(window.location.search).get('id');
-  const [session, setSession] = useState<session>();
+  const [session, setSession] = useState<Session>();
 
   const statusName = {
     available: 'Disponible',
@@ -62,9 +62,11 @@ function EmployeeSession() {
         <div key={slot.id} className="flex justify-center gap-6 py-4 items-center">
           <p className="text-gray-500">{slot.start_time}</p>
           <p className="text-gray-500">{statusName[slot.status]}</p>
-          {slot.status === 'cancelled' && <RestoreSlot id_slot={slot.id.toString()} setSession={setSession} />}
+          {slot.status === 'cancelled' && (
+            <RestoreSlot id_slot={slot.id.toString()} session={session} setSession={setSession} />
+          )}
           {(slot.status === 'available' || slot.status === 'booked') && (
-            <CancelSlot id_slot={slot.id.toString()} setSession={setSession} />
+            <CancelSlot id_slot={slot.id.toString()} session={session} setSession={setSession} />
           )}
         </div>
       ))}
