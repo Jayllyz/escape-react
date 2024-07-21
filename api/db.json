@@ -72,7 +72,7 @@
       "participants_count": 5,
       "email": "jsp@gmail.com",
       "start_time": "10:00",
-      "status": "pending"
+      "status": "confirmed"
     },
     {
       "id": "1721572797129",
@@ -80,7 +80,7 @@
       "participants_count": 5,
       "email": "szhang6@myges.fr",
       "start_time": "10:00",
-      "status": "pending"
+      "status": "rejected"
     }
   ]
 }

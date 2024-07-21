@@ -12,6 +12,7 @@ import EmployeeDashboard from './pages/EmployeeDashboard.tsx';
 import EmployeeSession from './pages/EmployeeSession.tsx';
 import Login from './pages/Login.tsx';
 import SessionPage from './pages/Session.tsx';
+import AdminBooking from './pages/AdminBooking.tsx';
 
 const rootElement = document.getElementById('root');
 if (rootElement) {
@@ -28,6 +29,7 @@ if (rootElement) {
           <Route path="/adminEmployee" element={<AdminEmployee />} />
           <Route path="/adminSession" element={<AdminSession />} />
           <Route path="/session" element={<SessionPage />} />
+          <Route path="/adminBooking" element={<AdminBooking />} />
         </Routes>
         <Footer />
       </Router>
