@@ -5,6 +5,7 @@ import type { Session } from '../lib/types';
 export default function Header(): JSX.Element {
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
   const [sessions, setSessions] = useState<Session[]>([]);
+  const [darkMode, setDarkMode] = useState<boolean>(localStorage.getItem('darkMode') !== 'false');
 
   useEffect(() => {
     const fetchSessions = async () => {
@@ -17,6 +18,15 @@ export default function Header(): JSX.Element {
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const toggleDarkMode = () => {
+    localStorage.setItem('darkMode', JSON.stringify(!darkMode));
+    setDarkMode(!darkMode);
+
+    console.log(darkMode);
+
+    window.location.reload();
   };
 
   return (
@@ -64,6 +74,14 @@ export default function Header(): JSX.Element {
             </a>
           </li>
         </ul>
+        <button
+          onClick={toggleDarkMode}
+          className="absolute bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600"
+          style={{ right: '1rem', top: '1rem', borderRadius: '5px' }}
+          type="button"
+        >
+          {darkMode ? 'Mode clair' : 'Mode sombre'}
+        </button>
       </nav>
     </header>
   );
