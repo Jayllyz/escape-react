@@ -44,7 +44,7 @@
       "slots": [
         {
           "id": 1,
-          "start_time": "8:00",
+          "start_time": "08:00",
           "status": "cancelled"
         },
         {
@@ -63,6 +63,24 @@
           "status": "available"
         }
       ]
+    }
+  ],
+  "bookings": [
+    {
+      "id": "1",
+      "id_session": "1",
+      "participants_count": 5,
+      "email": "jsp@gmail.com",
+      "start_time": "10:00",
+      "status": "pending"
+    },
+    {
+      "id": "1721572797129",
+      "id_session": "1",
+      "participants_count": 5,
+      "email": "szhang6@myges.fr",
+      "start_time": "10:00",
+      "status": "pending"
     }
   ]
 }

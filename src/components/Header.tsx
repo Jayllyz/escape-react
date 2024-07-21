@@ -1,7 +1,19 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { getSessions } from '../lib/api';
+import type { Session } from '../lib/types';
 
 export default function Header(): JSX.Element {
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
+  const [sessions, setSessions] = useState<Session[]>([]);
+
+  useEffect(() => {
+    const fetchSessions = async () => {
+      const { data } = await getSessions();
+      setSessions(data);
+    };
+
+    fetchSessions();
+  }, []);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -28,21 +40,16 @@ export default function Header(): JSX.Element {
             </button>
             {isDropdownOpen && (
               <ul className="absolute left-0 mt-2 w-40 bg-gray-500 shadow-md">
-                <li className="border-b">
-                  <a href="/#Fuir Jason" className="block px-4 py-2 hover:bg-gray-200 hover:text-black">
-                    Fuir Jason
-                  </a>
-                </li>
-                <li className="border-b">
-                  <a href="/#Le labyrinthe" className="block px-4 py-2 hover:bg-gray-200 hover:text-black">
-                    Le labyrinthe
-                  </a>
-                </li>
-                <li>
-                  <a href="/#L'asile" className="block px-4 py-2 hover:bg-gray-200 hover:text-black">
-                    L'asile
-                  </a>
-                </li>
+                {sessions.map((session) => (
+                  <li key={session.id} className="border-b">
+                    <a
+                      href={`/session?id=${session.id}`}
+                      className="block px-4 py-2 hover:bg-gray-200 hover:text-black"
+                    >
+                      {session.name}
+                    </a>
+                  </li>
+                ))}
               </ul>
             )}
           </li>

@@ -1,15 +1,9 @@
 import { useEffect, useState } from 'react';
+import BookSlot from '../components/ui/Session/BookSlot';
 import { getSession } from '../lib/api';
 import type { Session } from '../lib/types';
-import '../components/ui/EmployeeSession/CancelSlot';
-import BookSlot from '../components/ui/EmployeeSession/BookSlot';
-import CancelSlot from '../components/ui/EmployeeSession/CancelSlot';
-import CreateSlot from '../components/ui/EmployeeSession/CreateSlot';
-import DeleteSlot from '../components/ui/EmployeeSession/DeleteSlot';
-import EditSession from '../components/ui/EmployeeSession/EditSession';
-import RestoreSlot from '../components/ui/EmployeeSession/RestoreSlot';
 
-function EmployeeSession() {
+function SessionPage() {
   const id = new URLSearchParams(window.location.search).get('id');
   const [session, setSession] = useState<Session>();
 
@@ -47,9 +41,6 @@ function EmployeeSession() {
         <h1 className="text-3xl text-black font-bold">{session.name}</h1>
       </div>
       <div className="flex justify-center gap-6 py-4 border-b border-gray-300">
-        <EditSession session={session} setSession={setSession} />
-      </div>
-      <div className="flex justify-center gap-6 py-4 border-b border-gray-300">
         <p className="text-gray-500">Thème : {session.theme}</p>
         <p className="text-gray-500">Durée : {session.duration} min</p>
         <p className="text-gray-500">Prix : {session.price}€ / pers</p>
@@ -69,23 +60,13 @@ function EmployeeSession() {
         <div key={slot.id} className="flex justify-center gap-6 py-4 items-center">
           <p className="text-gray-500">{slot.start_time}</p>
           <p className="text-gray-500">{statusName[slot.status]}</p>
-          {slot.status === 'available' && (
-            <BookSlot id_slot={slot.id.toString()} session={session} setSession={setSession} />
-          )}
-          {slot.status === 'cancelled' && (
-            <RestoreSlot id_slot={slot.id.toString()} session={session} setSession={setSession} />
-          )}
-          {(slot.status === 'available' || slot.status === 'booked') && (
-            <CancelSlot id_slot={slot.id.toString()} session={session} setSession={setSession} />
-          )}
-          <DeleteSlot id_slot={slot.id.toString()} session={session} setSession={setSession} />
         </div>
       ))}
-      <div className="flex justify-center">
-        <CreateSlot session={session} setSession={setSession} />
+      <div className="flex justify-center gap-6 py-4">
+        <BookSlot session={session} />
       </div>
     </main>
   );
 }
 
-export default EmployeeSession;
+export default SessionPage;
