@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { getSessions } from '../lib/api';
 import type { Session } from '../lib/types';
 

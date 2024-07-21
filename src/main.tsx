@@ -10,8 +10,8 @@ import AdminEmployee from './pages/AdminEmployee.tsx';
 import AdminSession from './pages/AdminSession.tsx';
 import EmployeeDashboard from './pages/EmployeeDashboard.tsx';
 import EmployeeSession from './pages/EmployeeSession.tsx';
-import SessionPage from './pages/Session.tsx';
 import Login from './pages/Login.tsx';
+import SessionPage from './pages/Session.tsx';
 
 const rootElement = document.getElementById('root');
 if (rootElement) {

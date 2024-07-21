@@ -1,4 +1,4 @@
-import type { Employee, Session, Booking } from './types';
+import type { Booking, Employee, Session } from './types';
 
 export async function getSessions(): Promise<{ data: Session[]; status: number }> {
   const response = await fetch('http://localhost:3030/sessions');

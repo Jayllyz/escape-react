@@ -2,12 +2,12 @@ import { useEffect, useState } from 'react';
 import { getSession } from '../lib/api';
 import type { Session } from '../lib/types';
 import '../components/ui/EmployeeSession/CancelSlot';
+import BookSlot from '../components/ui/EmployeeSession/BookSlot';
 import CancelSlot from '../components/ui/EmployeeSession/CancelSlot';
 import CreateSlot from '../components/ui/EmployeeSession/CreateSlot';
 import DeleteSlot from '../components/ui/EmployeeSession/DeleteSlot';
 import EditSession from '../components/ui/EmployeeSession/EditSession';
 import RestoreSlot from '../components/ui/EmployeeSession/RestoreSlot';
-import BookSlot from '../components/ui/EmployeeSession/BookSlot';
 
 function EmployeeSession() {
   const id = new URLSearchParams(window.location.search).get('id');

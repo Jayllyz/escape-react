@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
+import BookSlot from '../components/ui/Session/BookSlot';
 import { getSession } from '../lib/api';
 import type { Session } from '../lib/types';
-import BookSlot from '../components/ui/Session/BookSlot';
 
 function SessionPage() {
   const id = new URLSearchParams(window.location.search).get('id');
