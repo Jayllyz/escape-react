@@ -79,7 +79,7 @@ function EmployeeSession() {
           {slot.status === 'available' && (
             <BookSlot id_slot={slot.id.toString()} session={session} setSession={setSession} />
           )}
-          {slot.status === 'cancelled' && (
+          {(slot.status === 'cancelled' || slot.status === 'booked') && (
             <RestoreSlot id_slot={slot.id.toString()} session={session} setSession={setSession} />
           )}
           {(slot.status === 'available' || slot.status === 'booked') && (
