@@ -38,6 +38,7 @@ function EmployeeSession() {
         window.location.href = '/employeeDashboard';
         return;
       }
+      data.slots = data.slots.sort((a, b) => (a.start_time > b.start_time ? 1 : -1));
       setSession(data);
     };
 
