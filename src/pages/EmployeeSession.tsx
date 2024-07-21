@@ -3,10 +3,10 @@ import { getSession } from '../lib/api';
 import type { Session } from '../lib/types';
 import '../components/ui/EmployeeSession/CancelSlot';
 import CancelSlot from '../components/ui/EmployeeSession/CancelSlot';
-import RestoreSlot from '../components/ui/EmployeeSession/RestoreSlot';
-import DeleteSlot from '../components/ui/EmployeeSession/DeleteSlot';
 import CreateSlot from '../components/ui/EmployeeSession/CreateSlot';
+import DeleteSlot from '../components/ui/EmployeeSession/DeleteSlot';
 import EditSession from '../components/ui/EmployeeSession/EditSession';
+import RestoreSlot from '../components/ui/EmployeeSession/RestoreSlot';
 
 function EmployeeSession() {
   const id = new URLSearchParams(window.location.search).get('id');
