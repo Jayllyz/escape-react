@@ -1,5 +1,5 @@
-import { updateSlot } from '../../lib/api';
-import type { Session } from '../../lib/types';
+import { updateSlot } from '../../../lib/api';
+import type { Session } from '../../../lib/types';
 
 function CancelSlot({
   id_slot,
@@ -11,7 +11,7 @@ function CancelSlot({
     const slot = newSession.slots.find((s) => s.id.toString() === id_slot);
     if (!slot) return;
     slot.status = 'cancelled';
-    await updateSlot(session.id.toString(), newSession);
+    await updateSlot(session.id, newSession);
 
     setSession((prevSession) => {
       if (!prevSession) return prevSession;
@@ -22,7 +22,7 @@ function CancelSlot({
     <div>
       <button
         className="text-white font-bold py-2 px-4"
-        style={{ backgroundColor: '#FF0000', borderRadius: '5px' }}
+        style={{ backgroundColor: '#f07400', borderRadius: '5px' }}
         type="button"
         onClick={handleCancelSlot}
       >
