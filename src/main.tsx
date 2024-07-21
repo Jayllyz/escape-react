@@ -6,6 +6,7 @@ import Legals from './pages/legals.tsx';
 import './index.css';
 import Footer from './components/Footer.tsx';
 import Header from './components/Header.tsx';
+import AdminBooking from './pages/AdminBooking.tsx';
 import AdminEmployee from './pages/AdminEmployee.tsx';
 import AdminSession from './pages/AdminSession.tsx';
 import EmployeeDashboard from './pages/EmployeeDashboard.tsx';
@@ -28,6 +29,7 @@ if (rootElement) {
           <Route path="/adminEmployee" element={<AdminEmployee />} />
           <Route path="/adminSession" element={<AdminSession />} />
           <Route path="/session" element={<SessionPage />} />
+          <Route path="/adminBooking" element={<AdminBooking />} />
         </Routes>
         <Footer />
       </Router>

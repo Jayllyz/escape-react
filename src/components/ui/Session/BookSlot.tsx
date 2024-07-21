@@ -16,7 +16,7 @@ function Popup({ onClose, session }: { onClose: () => void; session: Session }) 
       participants_count: Number.parseInt(participants.value),
       email: email.value,
       start_time: time.value,
-      status: 'pending' as 'pending' | 'confirmed' | 'cancelled',
+      status: 'pending' as 'pending' | 'confirmed' | 'rejected',
     };
 
     await createBooking(newBooking);
@@ -28,20 +28,20 @@ function Popup({ onClose, session }: { onClose: () => void; session: Session }) 
     <div className="flex items-center justify-center m-4">
       <div className="bg-white p-4 rounded-lg">
         <form>
-          <label htmlFor="email" className="block mt-4">
+          <label htmlFor="email" className="block mt-4 text-black">
             Votre email
             <input
               id="email"
               type="email"
-              className="block w-full border-black border-[1px] py-2 px-4 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+              className="block w-full text-black border-black border-[1px] py-2 px-4 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
               style={{ borderRadius: '5px' }}
             />
           </label>
-          <label htmlFor="time" className="block mt-4">
+          <label htmlFor="time" className="block mt-4 text-black">
             Heure demandée
             <select
               id="time"
-              className="block w-full border-black border-[1px] py-2 px-4 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+              className="block w-full text-black border-black border-[1px] py-2 px-4 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
               style={{ borderRadius: '5px' }}
             >
               {session.slots
@@ -53,12 +53,12 @@ function Popup({ onClose, session }: { onClose: () => void; session: Session }) 
                 ))}
             </select>
           </label>
-          <label htmlFor="participants" className="block mt-4">
+          <label htmlFor="participants" className="block mt-4 text-black">
             Nombre de participants
             <input
               id="participants"
               type="number"
-              className="block w-full border-black border-[1px] py-2 px-4 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
+              className="block w-full text-black border-black border-[1px] py-2 px-4 shadow-sm focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50"
               style={{ borderRadius: '5px' }}
             />
           </label>

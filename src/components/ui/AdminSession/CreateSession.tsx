@@ -43,7 +43,7 @@ function Popup({
     <div className="flex items-center justify-center m-4">
       <div className="bg-white p-4 rounded-lg">
         <form>
-          <label htmlFor="theme" className="block mt-4">
+          <label htmlFor="theme" className="block mt-4 text-black">
             Thème
             <input
               id="theme"
@@ -52,7 +52,7 @@ function Popup({
               style={{ borderRadius: '5px' }}
             />
           </label>
-          <label htmlFor="name" className="block mt-4">
+          <label htmlFor="name" className="block mt-4 text-black">
             Nom
             <input
               id="name"
@@ -61,7 +61,7 @@ function Popup({
               style={{ borderRadius: '5px' }}
             />
           </label>
-          <label htmlFor="description" className="block mt-4">
+          <label htmlFor="description" className="block mt-4 text-black">
             Description
             <textarea
               id="description"
@@ -69,7 +69,7 @@ function Popup({
               style={{ borderRadius: '5px' }}
             />
           </label>
-          <label htmlFor="price" className="block mt-4">
+          <label htmlFor="price" className="block mt-4 text-black">
             Prix
             <input
               id="price"
@@ -79,7 +79,7 @@ function Popup({
               style={{ borderRadius: '5px' }}
             />
           </label>
-          <label htmlFor="duration" className="block mt-4">
+          <label htmlFor="duration" className="block mt-4 text-black">
             Durée
             <input
               id="duration"
@@ -89,7 +89,7 @@ function Popup({
               style={{ borderRadius: '5px' }}
             />
           </label>
-          <label htmlFor="min_participants" className="block mt-4">
+          <label htmlFor="min_participants" className="block mt-4 text-black">
             Participants min
             <input
               id="min_participants"
@@ -99,7 +99,7 @@ function Popup({
               style={{ borderRadius: '5px' }}
             />
           </label>
-          <label htmlFor="max_participants" className="block mt-4">
+          <label htmlFor="max_participants" className="block mt-4 text-black">
             Participants max
             <input
               id="max_participants"
@@ -109,7 +109,7 @@ function Popup({
               style={{ borderRadius: '5px' }}
             />
           </label>
-          <div className="flex justify-center items-center gap-4">
+          <div className="flex justify-center items-center gap-4 text-black">
             <button
               className="mt-4 px-4 py-2 text-white"
               style={{ background: '#0055de', borderRadius: '5px' }}

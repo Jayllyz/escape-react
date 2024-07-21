@@ -27,5 +27,5 @@ export type Booking = {
   participants_count: number;
   email: string;
   start_time: string;
-  status: 'pending' | 'confirmed' | 'cancelled';
+  status: 'pending' | 'confirmed' | 'rejected';
 };

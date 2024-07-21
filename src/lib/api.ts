@@ -63,3 +63,19 @@ export async function createBooking(data: Booking): Promise<{ status: number }> 
 
   return { status: response.status };
 }
+
+export async function getBookings(): Promise<{ data: Booking[] }> {
+  const response = await fetch('http://localhost:3030/bookings');
+
+  return { data: await response.json() };
+}
+
+export async function updateBooking(id: string, data: Booking): Promise<{ status: number }> {
+  const response = await fetch(`http://localhost:3030/bookings/${id}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  });
+
+  return { status: response.status };
+}
