@@ -2,7 +2,7 @@ function Hero(): JSX.Element {
   return (
     <section className="p-8 h-[70vh] flex items-center justify-center bg-cover bg-right gap-24">
       <div className="flex flex-col justify-center gap-6">
-        <h1 className="text-6xl text-black font-bold">Qui sommes nous ?</h1>
+        <h1 className="text-6xl font-bold">Qui sommes nous ?</h1>
         <div className="max-w-[700px]">
           <p className="w-full">
             La maison horrifique est un univers captivant d'escape games, où chaque aventure est une expérience unique

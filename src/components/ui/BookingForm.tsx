@@ -17,14 +17,14 @@ export default function BookingForm(): JSX.Element {
 
   return (
     <div className="max-w-md w-full mx-auto p-6 bg-white rounded-lg shadow-md border-black border-[1px] border-opacity-30 ">
-      <h1 className="text-2xl font-semibold mb-6 text-center">Réserver dès maintenant !</h1>
+      <h1 className="text-2xl font-semibold mb-6 text-center text-black">Réserver dès maintenant !</h1>
       <form className="space-y-4" onSubmit={handleSubmit}>
         <div>
           <label className="block text-sm font-medium text-gray-700" htmlFor="email">
             Email
           </label>
           <input
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            className="mt-1 block text-black w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             type="email"
             id="email"
             name="email"
@@ -40,7 +40,7 @@ export default function BookingForm(): JSX.Element {
               Date
             </label>
             <input
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+              className="mt-1 block text-black w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
               type="date"
               id="date"
               name="date"
@@ -54,7 +54,7 @@ export default function BookingForm(): JSX.Element {
               Heure
             </label>
             <input
-              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+              className="mt-1 block text-black w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
               type="time"
               id="time"
               name="time"
@@ -69,7 +69,7 @@ export default function BookingForm(): JSX.Element {
             Nombres de participants
           </label>
           <input
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            className="mt-1 block text-black w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             type="number"
             id="numberParticipants"
             name="numberParticipants"
@@ -80,7 +80,7 @@ export default function BookingForm(): JSX.Element {
         </div>
         <div className="w-full flex items-center gap-4">
           <input
-            className="w-4 h-4 mt-1 block px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            className="w-4 h-4 mt-1 text-black block px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             type="checkbox"
             id="isIndividual"
             name="isIndividual"
@@ -97,7 +97,7 @@ export default function BookingForm(): JSX.Element {
             Précisions
           </label>
           <textarea
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            className="mt-1 block w-full text-black px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             id="precision"
             name="precision"
             placeholder="Votre message..."

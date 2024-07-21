@@ -12,15 +12,15 @@ export default function ContactForm(): JSX.Element {
   };
 
   return (
-    <div className="max-w-md mx-auto p-6 bg-white rounded-lg shadow-md border-black border-[1px] border-opacity-30 m-8">
-      <h1 className="text-2xl font-semibold mb-6 text-center">Nous contacter</h1>
+    <div className="max-w-md mx-auto p-8 bg-white rounded-lg shadow-md border-black border-[1px] border-opacity-30">
+      <h1 className="text-2xl font-semibold mb-6 text-black text-center">Nous contacter</h1>
       <form className="space-y-4" onSubmit={handleSubmit}>
         <div>
           <label className="block text-sm font-medium text-gray-700" htmlFor="name">
             Nom
           </label>
           <input
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            className="mt-1 block text-black w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             type="text"
             id="name"
             name="name"
@@ -35,7 +35,7 @@ export default function ContactForm(): JSX.Element {
             Email
           </label>
           <input
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            className="mt-1 block text-black w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             type="email"
             id="email"
             name="email"
@@ -50,7 +50,7 @@ export default function ContactForm(): JSX.Element {
             Message
           </label>
           <textarea
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            className="mt-1 block text-black w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
             id="message"
             name="message"
             placeholder="Votre message..."

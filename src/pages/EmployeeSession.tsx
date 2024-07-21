@@ -12,6 +12,13 @@ import RestoreSlot from '../components/ui/EmployeeSession/RestoreSlot';
 function EmployeeSession() {
   const id = new URLSearchParams(window.location.search).get('id');
   const [session, setSession] = useState<Session>();
+  const [darkMode, setDarkMode] = useState<boolean>(localStorage.getItem('darkMode') !== 'false');
+
+  useEffect(() => {
+    if (localStorage.getItem('darkMode') === 'false') {
+      setDarkMode(false);
+    }
+  }, []);
 
   const statusName = {
     available: 'Disponible',
@@ -42,9 +49,9 @@ function EmployeeSession() {
   }
 
   return (
-    <main>
+    <main className={darkMode ? 'text-white' : ''} style={darkMode ? { backgroundColor: '#242424' } : {}}>
       <div className="flex justify-center py-4 border-b border-gray-300">
-        <h1 className="text-3xl text-black font-bold">{session.name}</h1>
+        <h1 className="text-3xl font-bold">{session.name}</h1>
       </div>
       <div className="flex justify-center gap-6 py-4 border-b border-gray-300">
         <EditSession session={session} setSession={setSession} />
@@ -63,7 +70,7 @@ function EmployeeSession() {
         </div>
       </div>
       <div className="flex justify-center gap-6 py-4 border-b border-gray-300">
-        <h2 className="text-2xl text-black font-bold">Créneaux</h2>
+        <h2 className="text-2xl font-bold">Créneaux</h2>
       </div>
       {session.slots.map((slot) => (
         <div key={slot.id} className="flex justify-center gap-6 py-4 items-center">
