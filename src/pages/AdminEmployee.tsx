@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
+import Activate from '../components/ui/AdminEmployee/Activate';
+import Deactivate from '../components/ui/AdminEmployee/Deactivate';
 import { getEmployees } from '../lib/api';
 import type { Employee } from '../lib/types';
-import Deactivate from '../components/ui/AdminEmployee/Deactivate';
-import Activate from '../components/ui/AdminEmployee/Activate';
 
 function AdminSession() {
   const statusName = {

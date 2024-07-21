@@ -1,6 +1,6 @@
-import SessionsTable from '../components/ui/SessionsTable';
-import CreateSession from '../components/ui/AdminSession/CreateSession';
 import { useEffect, useState } from 'react';
+import CreateSession from '../components/ui/AdminSession/CreateSession';
+import SessionsTable from '../components/ui/SessionsTable';
 import { getSessions } from '../lib/api';
 import type { Session } from '../lib/types';
 
