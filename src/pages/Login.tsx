@@ -38,15 +38,22 @@ function Login() {
   };
 
   async function loginEmployee(email: string) {
-    const response = await fetch(`http://localhost:3030/users/${email}`);
+    const response = await fetch(`http://localhost:3030/employees/${email}`);
     if (response.status === 404) {
       setLoginError({
         message: 'Email ou mot de passe invalide',
       });
       return;
     }
-    const employeeData = (await response.json()) as { id: string };
+    const employeeData = (await response.json()) as { id: string; isAdmin: boolean; status: 'active' | 'inactive' };
+    if (employeeData.status === 'inactive') {
+      setLoginError({
+        message: 'Votre compte est inactif',
+      });
+      return;
+    }
     sessionStorage.setItem('emailEmployee', employeeData.id);
+    sessionStorage.setItem('isAdmin', employeeData.isAdmin.toString());
     window.location.href = '/employeeDashboard';
   }
 

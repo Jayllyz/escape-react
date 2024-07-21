@@ -1,19 +1,6 @@
-import { useEffect, useState } from 'react';
-import { getSessions } from '../../lib/api';
 import type { Session } from '../../lib/types';
 
-function SessionsTable() {
-  const [sessions, setSessions] = useState<Session[]>([]);
-
-  useEffect(() => {
-    const fetchSessions = async () => {
-      const { data } = await getSessions();
-      setSessions(data);
-    };
-
-    fetchSessions();
-  }, []);
-
+function SessionsTable({ sessions }: { sessions: Session[] }) {
   return (
     <table className="max-w-[1000px] w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
       <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -40,7 +27,7 @@ function SessionsTable() {
             </th>
             <td className="px-6 py-4">{session.theme}</td>
             <td className="px-6 py-4">{session.duration}</td>
-            <td className="px-6 py-4">{session.price} / pers</td>
+            <td className="px-6 py-4">{session.price}€ / pers</td>
           </tr>
         ))}
       </tbody>

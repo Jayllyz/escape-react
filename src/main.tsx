@@ -8,6 +8,8 @@ import Footer from './components/Footer.tsx';
 import Header from './components/Header.tsx';
 import EmployeeDashboard from './pages/EmployeeDashboard.tsx';
 import EmployeeSession from './pages/EmployeeSession.tsx';
+import AdminEmployee from './pages/AdminEmployee.tsx';
+import AdminSession from './pages/AdminSession.tsx';
 import Login from './pages/Login.tsx';
 
 const rootElement = document.getElementById('root');
@@ -22,6 +24,8 @@ if (rootElement) {
           <Route path="/mention-legales" element={<Legals />} />
           <Route path="/employeeDashboard" element={<EmployeeDashboard />} />
           <Route path="/employeeSession" element={<EmployeeSession />} />
+          <Route path="/adminEmployee" element={<AdminEmployee />} />
+          <Route path="/adminSession" element={<AdminSession />} />
         </Routes>
         <Footer />
       </Router>
