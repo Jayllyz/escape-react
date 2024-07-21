@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 function EmployeeDashboard() {
   const [darkMode, setDarkMode] = useState<boolean>(localStorage.getItem('darkMode') !== 'false');
