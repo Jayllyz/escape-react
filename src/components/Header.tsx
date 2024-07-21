@@ -23,9 +23,6 @@ export default function Header(): JSX.Element {
   const toggleDarkMode = () => {
     localStorage.setItem('darkMode', JSON.stringify(!darkMode));
     setDarkMode(!darkMode);
-
-    console.log(darkMode);
-
     window.location.reload();
   };
 
@@ -40,7 +37,7 @@ export default function Header(): JSX.Element {
             </a>
           </li>
           <li className="mx-2 relative group">
-            <a href="#booking-section" className="block">
+            <a href="/#booking-section" className="block">
               Réservation
             </a>
           </li>
@@ -64,7 +61,7 @@ export default function Header(): JSX.Element {
             )}
           </li>
           <li className="mx-2">
-            <a href="#contact-section" className="block">
+            <a href="/#contact-section" className="block">
               Contact
             </a>
           </li>

@@ -13,9 +13,9 @@ export async function getSession(id: string): Promise<{ data: Session | null; st
     return { data: null, status: 404 };
   }
 
-  const data = await response.json();
-  const filtered = data.filter((session: Session) => session.id.toString() === id);
-  return { data: filtered[0], status: response.status };
+  const data = (await response.json()) as Session[];
+  const filtered = data?.filter((session: Session) => session.id.toString() === id);
+  return { data: filtered[0] || null, status: response.status };
 }
 
 export async function createSession(data: Session): Promise<{ status: number }> {

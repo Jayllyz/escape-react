@@ -1,7 +1,17 @@
+import { useEffect, useState } from 'react';
+
 export default function Legals(): JSX.Element {
+  const [darkMode, setDarkMode] = useState<boolean>(localStorage.getItem('darkMode') !== 'false');
+
+  useEffect(() => {
+    if (localStorage.getItem('darkMode') === 'false') {
+      setDarkMode(false);
+    }
+  }, []);
+
   return (
     <>
-      <main>
+      <main className={darkMode ? 'text-white' : ''} style={darkMode ? { backgroundColor: '#242424' } : {}}>
         <div className="max-w-4xl mx-auto p-8">
           <h1 className="text-3xl font-bold text-center">Mentions légales</h1>
           <h2 className="text-2xl font-semibold mt-8">1. Présentation du site</h2>
