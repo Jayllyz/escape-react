@@ -20,3 +20,12 @@ export type Employee = {
   isAdmin: boolean;
   status: 'active' | 'inactive';
 };
+
+export type Booking = {
+  id: string;
+  id_session: string;
+  participants_count: number;
+  email: string;
+  start_time: string;
+  status: 'pending' | 'confirmed' | 'cancelled';
+};

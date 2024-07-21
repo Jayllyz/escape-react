@@ -1,4 +1,4 @@
-import type { Employee, Session } from './types';
+import type { Employee, Session, Booking } from './types';
 
 export async function getSessions(): Promise<{ data: Session[]; status: number }> {
   const response = await fetch('http://localhost:3030/sessions');
@@ -47,6 +47,16 @@ export async function getEmployees(): Promise<{ data: Employee[] }> {
 export async function updateEmployee(id: string, data: Employee): Promise<{ status: number }> {
   const response = await fetch(`http://localhost:3030/employees/${id}`, {
     method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(data),
+  });
+
+  return { status: response.status };
+}
+
+export async function createBooking(data: Booking): Promise<{ status: number }> {
+  const response = await fetch('http://localhost:3030/bookings', {
+    method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(data),
   });
