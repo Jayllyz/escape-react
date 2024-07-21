@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import { getSessions, getBookings } from '../lib/api';
-import type { Session, Booking } from '../lib/types';
 import ConfirmBooking from '../components/ui/AdminBooking/ConfirmBooking';
 import DenyBooking from '../components/ui/AdminBooking/DenyBooking';
+import { getBookings, getSessions } from '../lib/api';
+import type { Booking, Session } from '../lib/types';
 
 function AdminSession() {
   const statusName = {
