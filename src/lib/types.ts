@@ -1,5 +1,5 @@
 export type Session = {
-  id: number;
+  id: string;
   theme: string;
   name: string;
   description: string;
@@ -12,4 +12,11 @@ export type Session = {
     start_time: string;
     status: 'available' | 'booked' | 'cancelled';
   }[];
+};
+
+export type Employee = {
+  id: string;
+  password: string;
+  isAdmin: boolean;
+  status: 'active' | 'inactive';
 };

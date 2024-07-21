@@ -1,24 +1,34 @@
 {
-  "users": [
+  "employees": [
     {
       "id": "admin@gmail.com",
-      "password": "Respons11"
+      "password": "Respons11",
+      "isAdmin": true,
+      "status": "active"
     },
     {
       "id": "johndoe@john.com",
-      "password": "1234124124"
+      "password": "1234124124",
+      "isAdmin": false,
+      "status": "inactive"
     },
     {
       "id": "laurianne@gmail.com",
-      "password": "1234124124"
+      "password": "1234124124",
+      "isAdmin": false,
+      "status": "active"
     },
     {
       "id": "jeanne@gmail.com",
-      "password": "1234124124"
+      "password": "1234124124",
+      "isAdmin": false,
+      "status": "active"
     },
     {
       "id": "henry@outlook.fr",
-      "password": "1234124124"
+      "password": "1234124124",
+      "isAdmin": false,
+      "status": "active"
     }
   ],
   "sessions": [
