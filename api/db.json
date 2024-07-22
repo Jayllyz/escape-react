@@ -43,6 +43,11 @@
       "duration": 60,
       "slots": [
         {
+          "id": 1721522029040,
+          "start_time": "06:30",
+          "status": "booked"
+        },
+        {
           "id": 1,
           "start_time": "08:00",
           "status": "cancelled"
@@ -56,13 +61,19 @@
           "id": 3,
           "start_time": "12:00",
           "status": "available"
-        },
-        {
-          "id": 1721522029040,
-          "start_time": "06:30",
-          "status": "available"
         }
       ]
+    },
+    {
+      "id": "1721642624683",
+      "theme": "Horreur",
+      "name": "Le labyrinthe",
+      "description": "Bienvenue dans \"Le labyrinthe\", un jeu d'évasion stimulant qui vous plongera dans un monde de mystère et de défis. Vous êtes piégés dans un labyrinthe complexe, rempli de pièges et d'énigmes à résoudre. Vous avez 60 minutes pour trouver votre chemin, découvrir des indices cachés et déverrouiller les portes. Travaillez en équipe, communiquez efficacement et utilisez votre logique pour vous échapper. Le temps presse, et chaque mauvaise décision pourrait vous coûter cher. Bonne chance, et que le jeu commence !",
+      "price": 30,
+      "duration": 150,
+      "min_participants": 10,
+      "max_participants": 25,
+      "slots": []
     }
   ],
   "bookings": [
@@ -80,6 +91,14 @@
       "participants_count": 5,
       "email": "szhang6@myges.fr",
       "start_time": "10:00",
+      "status": "rejected"
+    },
+    {
+      "id": "1721642506167",
+      "id_session": "1",
+      "participants_count": 50,
+      "email": "szhang0709@gmail.com",
+      "start_time": "12:00",
       "status": "rejected"
     }
   ]

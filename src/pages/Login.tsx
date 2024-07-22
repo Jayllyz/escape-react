@@ -18,6 +18,9 @@ function Login() {
   const [darkMode, setDarkMode] = useState<boolean>(localStorage.getItem('darkMode') !== 'false');
 
   useEffect(() => {
+    if (sessionStorage.getItem('loggedIn') === 'true') {
+      window.location.href = '/employeeDashboard';
+    }
     if (localStorage.getItem('darkMode') === 'false') {
       setDarkMode(false);
     }
@@ -37,30 +40,46 @@ function Login() {
 
     const validatedFields = EmployeeLoginSchema.safeParse(formData);
     if (validatedFields.success) {
-      loginEmployee(formData.email);
+      loginEmployee(formData.email, formData.password);
       return;
     }
     const errors = validatedFields.error.flatten().fieldErrors;
     setFormErrors({ email: errors.email?.[0], password: errors.password?.[0] });
   };
 
-  async function loginEmployee(email: string) {
+  async function loginEmployee(email: string, password: string) {
     const response = await fetch(`http://localhost:3030/employees/${email}`);
     if (response.status === 404) {
       setLoginError({
-        message: 'Email ou mot de passe invalide',
+        message: "L'adresse email n'est pas enregistrée",
       });
       return;
     }
-    const employeeData = (await response.json()) as { id: string; isAdmin: boolean; status: 'active' | 'inactive' };
+
+    const employeeData = (await response.json()) as {
+      id: string;
+      isAdmin: boolean;
+      status: 'active' | 'inactive';
+      password: string;
+    };
+
     if (employeeData.status === 'inactive') {
       setLoginError({
         message: 'Votre compte est inactif',
       });
       return;
     }
+
+    if (employeeData.password !== password) {
+      setLoginError({
+        message: 'Mot de passe incorrect',
+      });
+      return;
+    }
+
     sessionStorage.setItem('emailEmployee', employeeData.id);
     sessionStorage.setItem('isAdmin', employeeData.isAdmin.toString());
+    sessionStorage.setItem('loggedIn', 'true');
     window.location.href = '/employeeDashboard';
   }
 
