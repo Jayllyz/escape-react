@@ -26,6 +26,11 @@ export default function Header(): JSX.Element {
     window.location.reload();
   };
 
+  const disconnect = () => {
+    sessionStorage.removeItem('loggedIn');
+    window.location.href = '/';
+  };
+
   return (
     <header>
       <nav className="grid py-8 items-center justify-center bg-slate-500 text-white">
@@ -71,6 +76,16 @@ export default function Header(): JSX.Element {
             </a>
           </li>
         </ul>
+        {sessionStorage.getItem('loggedIn') && (
+          <button
+            className="absolute bg-red-700 text-white px-4 py-2 rounded hover:bg-red-500"
+            style={{ right: '10rem', top: '1rem', borderRadius: '5px' }}
+            type="button"
+            onClick={disconnect}
+          >
+            Déconnexion
+          </button>
+        )}
         <button
           onClick={toggleDarkMode}
           className="absolute bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-600"
